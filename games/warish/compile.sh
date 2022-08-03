@@ -1,0 +1,1 @@
+g++ ./src/game.cpp -o ./build/warish
