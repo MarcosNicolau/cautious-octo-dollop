@@ -22,7 +22,7 @@ vector<Delivery> getDeliveries(vector<string> clients)
 {
     vector<Delivery> deliveries;
     fstream fs;
-    fs.open("./data/Datos.txt");
+    fs.open("../data/Datos.txt");
     if (!fs)
     {
         cout << "Err while loading deliveries..." << endl;

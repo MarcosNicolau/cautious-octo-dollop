@@ -22,16 +22,19 @@ vector<string> getClientsName()
 {
     vector<string> clients;
     fstream fs;
-    fs.open("./data/Nombres.txt");
+    fs.open("../data/Nombres.txt");
     if (!fs)
     {
         cout << "Err while loading clients..." << endl;
         return {};
     }
     string res;
+    int line = 0;
     while (getline(fs, res))
     {
-        clients.push_back(res);
+        if (line <= 7)
+            clients.push_back(res);
+        line++;
     };
     return clients;
 };

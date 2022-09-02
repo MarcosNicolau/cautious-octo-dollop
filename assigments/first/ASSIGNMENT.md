@@ -1,5 +1,3 @@
-## Assignment (yep, it's in Spanish):
-
 Una empresa logística trabaja para 8 clientes transportando 5 tipos de productos diferentes. En cada
 entrega que hacen para cualquiera de los clientes registran los siguientes datos
 
