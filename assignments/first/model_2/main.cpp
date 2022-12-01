@@ -84,12 +84,12 @@ void printDelimiter()
     cout << endl;
 };
 
-template <class T, class Q>
-void sortDobleArray(T array[], Q array_2[], int dimension, bool ascendant = true)
+template <class T>
+void sortDobleArray(T array[], int array_2[], int dimension, bool ascendant = true)
 {
     bool hasSwapped = false;
 
-    for (int i = 0; i < dimension--; i++)
+    for (int i = 0; i < dimension - 1; i++)
     {
         T number = array[i];
         T nextNumber = array[i + 1];
@@ -98,7 +98,7 @@ void sortDobleArray(T array[], Q array_2[], int dimension, bool ascendant = true
             array[i] = nextNumber;
             array_2[i] = i + 1;
             array[i + 1] = number;
-            array_2[i] = i;
+            array_2[i + 1] = i;
             hasSwapped = true;
         };
     };
@@ -185,7 +185,7 @@ int main()
 
     // Sort exceeding client distance
     getExceedingClientProductsDistance(clients, exceeding_client);
-    sortDobleArray<float, int>(exceeding_client.distance.values, exceeding_client.distance.pos, total_products);
+    sortDobleArray<float>(exceeding_client.distance.values, exceeding_client.distance.pos, total_products);
 
     // EX 2
     printExercise2(exceeding_client.distance.values, exceeding_client.distance.pos, exceeding_client.code);
